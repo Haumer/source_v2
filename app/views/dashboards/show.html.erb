@@ -1,9 +1,7 @@
 <div class="dashboard-container" data-controller="drag-and-drop" data-drag-url="/sections/:id/move">
   <% @dashboard.sections.each do |section| %>
-    <div class="section <%= 'lg' if section.position == @dashboard.sections.order(position: :asc).last.position %>" draggable="true" data-target="drag-and-drop.id" data-id="<%= section.id %>" data-position="<%= section.position %>"=>
-      id is <%= section.id %>
-      <br>
-      position is <%= section.position %>
+    <div class="section card card-body m-1" draggable="true" data-target="drag-and-drop.id" data-id="<%= section.id %>" data-position="<%= section.position %>"=>
+      section
     </div>
   <% end %>
 </div>
@@ -15,9 +13,6 @@
     height: 100vh;
   }
   .section {
-    width: 50%;
-  }
-  .section.lg {
     width: 100%;
   }
 </style>

@@ -3,7 +3,7 @@ import Sortable from 'sortablejs'
 import Rails from "@rails/ujs"
 
 export default class extends Controller {
-  static targets = [ "id", "position" ]
+  static targets = [ "id" ]
 
   connect() {
     this.sortable = Sortable.create(this.element, {
