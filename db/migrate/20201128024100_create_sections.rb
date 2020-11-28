@@ -1,7 +1,7 @@
 class CreateSections < ActiveRecord::Migration[6.0]
   def change
     create_table :sections do |t|
-      t.references :user, null: false, foreign_key: true
+      t.references :dashboard, null: false, foreign_key: true
 
       t.timestamps
     end
