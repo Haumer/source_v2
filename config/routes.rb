@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :users, only: [ :show ]
   resources :dashboards, only: [ :edit, :update ]
-  resources :sections, only: [ :edit, :update ]
+  resources :sections, only: [ :edit, :update ] do
+    member do
+      patch :move
+    end
+  end
 
   get "d/:user", to: "dashboards#show"
 end

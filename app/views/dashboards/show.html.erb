@@ -1,6 +1,6 @@
-<div class="dashboard-container">
+<div class="dashboard-container" data-controller="drag-and-drop" data-drag-url="/section/:id/move">
   <% @dashboard.sections.each do |section| %>
-    <div class="section">
+    <div class="card card-body" draggable="true" data-id="<%= section.id %>"=>
       <%= section %>
     </div>
   <% end %>
