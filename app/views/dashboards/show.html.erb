@@ -1,1 +1,7 @@
-<%= @user %>
+<div class="dashboard-container">
+  <% @dashboard.sections.each do |section| %>
+    <div class="section">
+      <%= section %>
+    </div>
+  <% end %>
+</div>
