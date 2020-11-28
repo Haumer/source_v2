@@ -1,24 +1,25 @@
 import { Controller } from "stimulus"
 import Sortable from 'sortablejs'
+import Rails from "@rails/ujs"
 
 export default class extends Controller {
-  static targets = [ "output" ]
+  static targets = [ "id", "position" ]
 
   connect() {
     this.sortable = Sortable.create(this.element, {
-      onEnd: this.end
+      onEnd: this.end.bind(this)
     })
   }
 
-  end() {
+  end(event) {
+    let url = this.element.dataset.dragUrl
     let data = new FormData()
-    let id = event.item.dataset.id
-    data.append(position: event.newIndex + 1)
+    let id = this.idTarget.dataset.id
+    data.append("position", event.newIndex + 1)
     Rails.ajax({
-      url: this.data.get("url").replace(":id", id),
+      url: url.replace(":id", id),
       type: 'PATCH',
       data: data
     })
-    console.log(event)
   }
 }
