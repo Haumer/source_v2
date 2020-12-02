@@ -1,9 +1,4 @@
-.handle {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding: 0 24px;
-}
+
 .fa-grip-vertical {
   color: gray;
   font-size: 20px;
@@ -11,27 +6,26 @@
 .dashboard-container {
   display: grid;
   grid-template-columns: 240px 1fr;
-}
-.left-nav {
-  grid-column: 1 / 2;
-}
-.main {
-  display: flex;
-  flex-wrap: wrap;
-  height: 90vh;
-}
-.section {
-  display: flex;
-  background: #fff;
-  padding: 24px 24px 24px 0;
-  margin: 2px;
-  border-radius: 6px;
-  width: 100%;
-}
-.sortable-ghost {
-  opacity: 0.3;
-  border: 1px solid gray;
-}
-.sortable-drag {
-  background: blue;
+  .left-nav {
+    grid-column: 1 / 2;
+  }
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+    height: 90vh;
+    .section {
+      display: flex;
+      background: #fff;
+      padding: 24px 24px 24px 0;
+      margin: 2px;
+      border-radius: 6px;
+      width: 100%;
+      .handle {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 24px;
+      }
+    }
+  }
 }
