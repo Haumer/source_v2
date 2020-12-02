@@ -1,8 +1,3 @@
-
-.fa-grip-vertical {
-  color: gray;
-  font-size: 20px;
-}
 .dashboard-container {
   display: grid;
   grid-template-columns: 240px 1fr;
@@ -25,6 +20,10 @@
         display: flex;
         align-items: center;
         padding: 0 24px;
+        .fa-grip-vertical {
+          color: gray;
+          font-size: 20px;
+        }
       }
     }
   }
