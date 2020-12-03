@@ -198,6 +198,8 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
+    view_component (2.21.0)
+      activesupport (>= 5.0.0, < 7.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.1.0)
@@ -239,6 +241,7 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   stimulus_reflex (~> 3.3)
   uglifier
+  view_component
   web-console (>= 3.3.0)
   webpacker
 

@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.7.1'
 
+gem "view_component", require: "view_component/engine"
 gem 'acts_as_list'
 gem 'bootsnap', require: false
 gem 'devise'
@@ -9,7 +10,7 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '6.0.2.1'
 gem 'redis'
-
+gem "stimulus_reflex", "~> 3.3"
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'sassc-rails'
@@ -29,5 +30,3 @@ group :development, :test do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
 end
-
-gem "stimulus_reflex", "~> 3.3"
