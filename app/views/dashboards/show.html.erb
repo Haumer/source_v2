@@ -1,6 +1,6 @@
 <div class="dashboard-container">
   <div class="left-nav">
-    LEFT NAV
+    <%= render Dashboards::LeftNavComponent.new(dashboard: @dashboard) %>
   </div>
   <div class="main" data-controller="drag-and-drop" data-drag-url="/sections/:id/move">
     <%= render Dashboards::SectionComponent.with_collection(@dashboard.sections) %>
