@@ -3,17 +3,6 @@
     LEFT NAV
   </div>
   <div class="main" data-controller="drag-and-drop" data-drag-url="/sections/:id/move">
-    <% @dashboard.sections.each do |section| %>
-      <div class="section" data-target="drag-and-drop.id" data-id="<%= section.id %>" data-position="<%= section.position %>">
-        <div class="handle">
-          <i class="fas fa-grip-vertical"></i>
-        </div>
-        <div class="section-content">
-          ID <%= section.id %>
-          <br>
-          POSITION <%= section.position %>
-        </div>
-      </div>
-    <% end %>
+    <%= render Dashboards::SectionComponent.with_collection(@dashboard.sections) %>
   </div>
 </div>
