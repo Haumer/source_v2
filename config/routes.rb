@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users, only: [ :show ]
   resources :dashboards, only: [ :edit, :update ]
   resources :sections, only: [ :edit, :update ]
+  resources :links, only: [ :create, :update ]
 
   patch "sections/:id/move", to: "sections#move"
 
