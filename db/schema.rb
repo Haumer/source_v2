@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_02_235843) do
+ActiveRecord::Schema.define(version: 2020_12_05_150314) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,11 +24,13 @@ ActiveRecord::Schema.define(version: 2020_12_02_235843) do
 
   create_table "links", force: :cascade do |t|
     t.string "url"
-    t.string "domain"
     t.datetime "last_visited"
-    t.integer "count"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "visit_count", default: 0
+    t.string "title"
+    t.string "image"
+    t.string "favicon"
   end
 
   create_table "notes", force: :cascade do |t|

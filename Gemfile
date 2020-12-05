@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.7.1'
 
+gem 'metainspector'
 gem "view_component", require: "view_component/engine"
 gem 'acts_as_list'
 gem 'bootsnap', require: false
