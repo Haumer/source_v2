@@ -1,1 +1,9 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+# Your Source for Browser truth
+**build in progress**
+
+An easy way to organise tab folders and notes. Easy and shareable!
+
+TODO:
+- [x] sections
+- [x] link support
+- [ ] shareable
