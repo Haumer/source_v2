@@ -3,6 +3,14 @@ class NotesController < ApplicationController
 
   def create
     @note = Note.new(note_params)
+    section = Section.find(params[:section_id])
+    @note.section = section
+    if note.save!
+      redirect_back(fallback_location: section.dashboard)
+      flash[:notice] = "Success!"
+    else
+      flash[:notice] = "Something went wrong!"
+    end
   end
 
   def edit

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :dashboards, only: [ :edit, :update ]
   resources :sections, only: [ :edit, :update ] do
     resources :links, only: [ :create, :update ]
+    resources :notes, only: [ :create, :update ]
   end
 
   patch "sections/:id/move", to: "sections#move"
