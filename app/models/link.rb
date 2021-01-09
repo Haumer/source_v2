@@ -1,5 +1,6 @@
 class Link < ApplicationRecord
   after_create :get_meta_tags, :get_favicon
+  belongs_to :section
 
   def get_meta_tags
     begin

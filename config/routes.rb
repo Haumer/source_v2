@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :users, only: [ :show ]
   resources :dashboards, only: [ :edit, :update ]
-  resources :sections, only: [ :edit, :update ]
-  resources :links, only: [ :create, :update ]
+  resources :sections, only: [ :edit, :update ] do
+    resources :links, only: [ :create, :update ]
+  end
 
   patch "sections/:id/move", to: "sections#move"
 
