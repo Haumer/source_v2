@@ -10,5 +10,5 @@ class Links::FormComponent < ViewComponent::Base
 
   private
 
-  attr_reader :link
+  attr_reader :link, :section
 end

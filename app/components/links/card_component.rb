@@ -4,4 +4,8 @@ class Links::CardComponent < ViewComponent::Base
   def initialize(link:)
     @link = link
   end
+
+  private
+
+  attr_reader :link
 end
