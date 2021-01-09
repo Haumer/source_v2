@@ -7,5 +7,6 @@
     <br>
     POSITION <%= section.position %>
   </div>
-  <%= render Links::FormComponent.new(link: @link) %>
+  <%#= render Links::CardComponent.with_collection(section.links) %>
+  <%= render Links::FormComponent.new(link: @link, section: section) %>
 </div>

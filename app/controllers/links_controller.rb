@@ -2,6 +2,7 @@ class LinksController < ApplicationController
   def create
     @link = Link.new(link_params)
     if @link.save!
+      raise
       redirect_back(fallback_location: root_path)
       flash[:notice] = "Success!"
     else

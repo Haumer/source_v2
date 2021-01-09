@@ -1,6 +1,10 @@
 class Links::FormComponent < ViewComponent::Base
-  def initialize(link:)
+  def initialize(link:, section:)
     @link = link || Link.new
+  end
+
+  def render?
+    @link.present?
   end
 
   private
