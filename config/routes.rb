@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :links, only: [ :create, :update ]
     resources :notes, only: [ :create, :update ]
   end
+  resources :links, only: :destroy
 
   patch "sections/:id/move", to: "sections#move"
 
