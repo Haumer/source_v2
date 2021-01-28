@@ -1,3 +1,8 @@
-<div class="left-nav">
-
+<div class="left-nav" data-controller="swap-content">
+  <div class="left-nav-content" data-target="swap-content.display" data-action="click->swap-content#swap">
+    content
+  </div>
+  <div class="left-nav-form d-none" data-target="swap-content.form" data-action="click->swap-content#swap">
+    form
+  </div>
 </div>

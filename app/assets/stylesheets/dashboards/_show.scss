@@ -2,10 +2,12 @@
   display: grid;
   grid-template-columns: 240px 1fr;
   .left-nav {
+    height: 100%;
     grid-column: 1 / 2;
     background-color: #fff;
     border-radius: 6px;
     margin: 2px;
+    box-shadow: 0 4px 3px -3px grey;
   }
   .main {
     display: flex;
@@ -17,6 +19,7 @@
       padding: 24px 24px 24px 0;
       margin: 2px;
       border-radius: 6px;
+      box-shadow: 0 4px 3px -3px grey;
       width: 100%;
       .handle {
         height: 100%;
