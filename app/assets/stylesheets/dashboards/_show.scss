@@ -3,6 +3,9 @@
   grid-template-columns: 240px 1fr;
   .left-nav {
     grid-column: 1 / 2;
+    background-color: #fff;
+    border-radius: 6px;
+    margin: 2px;
   }
   .main {
     display: flex;
