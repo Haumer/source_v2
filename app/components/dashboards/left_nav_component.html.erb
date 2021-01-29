@@ -2,7 +2,7 @@
   <div class="left-nav-content" data-target="swap-content.display" data-action="click->swap-content#swap">
     content
   </div>
-  <div class="left-nav-form d-none" data-target="swap-content.form" data-action="click->swap-content#swap">
-    form
+  <div class="left-nav-form d-none" data-target="swap-content.form">
+    <%= render Notes::FormComponent.new(note: Note.new, dashboard: dashboard) %>
   </div>
 </div>

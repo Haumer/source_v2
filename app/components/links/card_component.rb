@@ -5,6 +5,10 @@ class Links::CardComponent < ViewComponent::Base
     @link = link
   end
 
+  def render?
+    @link.present?
+  end
+
   private
 
   attr_reader :link

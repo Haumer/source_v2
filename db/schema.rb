@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 2021_01_09_220212) do
     t.string "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "section_id"
-    t.index ["section_id"], name: "index_notes_on_section_id"
+    t.bigint "dashboard_id"
+    t.index ["dashboard_id"], name: "index_notes_on_dashboard_id"
   end
 
   create_table "sections", force: :cascade do |t|
@@ -71,6 +71,6 @@ ActiveRecord::Schema.define(version: 2021_01_09_220212) do
 
   add_foreign_key "dashboards", "users"
   add_foreign_key "links", "sections"
-  add_foreign_key "notes", "sections"
+  add_foreign_key "notes", "dashboards"
   add_foreign_key "sections", "dashboards"
 end

@@ -1,6 +1,7 @@
 class Dashboard < ApplicationRecord
   belongs_to :user
   has_many :sections, -> { order(position: :asc) }
+  has_many :notes
 
   after_create :create_default_sections
 
