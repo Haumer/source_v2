@@ -2,6 +2,8 @@
   <div class="handle">
     <i class="fas fa-grip-vertical"></i>
   </div>
-  <%= render Links::CardComponent.with_collection(section.links) %>
+  <div class="section-content">
+    <%= render Links::CardComponent.with_collection(section.links) %>
+  </div>
   <%= render Links::FormComponent.new(link: @link, section: section) %>
 </div>
