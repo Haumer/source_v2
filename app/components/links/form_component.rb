@@ -5,7 +5,7 @@ class Links::FormComponent < ViewComponent::Base
   end
 
   def render?
-    @link.present?
+    @section.present?
   end
 
   private

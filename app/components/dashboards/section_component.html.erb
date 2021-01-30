@@ -5,5 +5,5 @@
   <div class="section-content">
     <%= render Links::CardComponent.with_collection(section.links) %>
   </div>
-  <%= render Links::FormComponent.new(link: @link, section: section) %>
+  <%= render Links::FormComponent.new(link: Link.new, section: section) %>
 </div>

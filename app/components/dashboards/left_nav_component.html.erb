@@ -5,4 +5,5 @@
   <div class="left-nav-form d-none" data-target="swap-content.form">
     <%= render Notes::FormComponent.new(note: Note.new, dashboard: dashboard) %>
   </div>
+  <%= render Notes::CardComponent.with_collection(dashboard.notes) %>
 </div>

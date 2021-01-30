@@ -1,9 +1,11 @@
 <%= link_to link.url, target: :_blank do %>
-  <%= link.title %>
-  <% if link.image %>
-    <%= image_tag(link.image, size: "48x48") %>
-  <% end %>
-  <%= link_to link_path(link), method: :delete do %>
-    d
-  <% end %>
+  <div class="link-card">
+    <% if link.image %>
+      <%= image_tag(link.image, size: "48x48") %>
+    <% end %>
+    <%= link.title %>
+    <%= link_to link_path(link), method: :delete do %>
+      <i class="fas fa-trash"></i>
+    <% end %>
+  </div>
 <% end %>
