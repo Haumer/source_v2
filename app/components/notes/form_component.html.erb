@@ -1,4 +1,4 @@
 <%= simple_form_for [dashboard, note], wrapper: :inline_form do |f| %>
-  <%= f.input :content %>
+  <%= f.input :content, as: :text %>
   <%= f.submit %>
 <% end %>

@@ -1,9 +1,11 @@
 <div class="left-nav" data-controller="swap-content">
   <div class="left-nav-content" data-target="swap-content.display" data-action="click->swap-content#swap">
-    content
+    New Note
+  </div>
+  <div class="note-cards">
+    <%= render Notes::CardComponent.with_collection(dashboard.notes) %>
   </div>
   <div class="left-nav-form d-none" data-target="swap-content.form">
     <%= render Notes::FormComponent.new(note: Note.new, dashboard: dashboard) %>
   </div>
-  <%= render Notes::CardComponent.with_collection(dashboard.notes) %>
 </div>
